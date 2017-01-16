@@ -3,8 +3,7 @@
 ; p 201.207.0753 | e budser@gmail.com
 
 ; 1)Download a portable copy (no installation required) of AHK from https://autohotkey.com/download/
-;   and extract it to a safe place on your hard drive.
-;   Most Tesla boxes will need the download named "Unicode 64-bit - for increased performance on 64-bit systems"
+;   Follow the link "Download AutoHotkey .zip" and extract "AutoHotkeyU64.exe" to a safe place on your hard drive.
 ; 2)Save this file (the one you're reading) in .ahk format to a safe place on your hard drive.
 ; 3)Select Autohotkey.exe as the default program to open this .ahk file
 ; 4)Create a shortcut to this file in the startup folder 
@@ -23,7 +22,7 @@
    VarSetCapacity(Clip0, 0)      ; Free memory
 Return
 
-::-es::		; Edit the AutoHotKey script
+::-es::		; Edit the AutoHotkey script
 Run C:\Users\atalenfeld\Documents\My Program Files\NotePad++\notepad++.exe C:\Users\atalenfeld\Documents\My Program Files\AutoHotkey.ahk
 Return
 
@@ -711,7 +710,7 @@ poke()		;From the delivery object page, click the garage button and poke a VIN (
 
 }
 
-::-kronos::			; Type URL for Kronos
+::-kronos::		; Type URL for Kronos
 SendInput http://kronos7.teslamotors.com/wfc/navigator/logon
 Return
 
@@ -726,5 +725,119 @@ Return
 ::-docs::		; Display reminder of document naming convention with always-on-top window
 MsgBox, 4096,,Executed_PMT$xx.xx_DD_MVPA_Lease/RIC_DMV_RN_ShortVIN_LastName_FED-EX
 return
+
+
+::-rental::		; Type rental car instructions for customers
+::-arms::		; Type rental car instructions for customers
+SendInput We have created an authorization for a rental car that works at participating enterprise locations (please note that some locations, such as airports, do not allow authorization codes).  You can return your rental to our service center on your delivery date.  We’re hopeful we’ll be able to meet you sooner, but out of an abundance of caution, we’ve authorized the rental through ___________________________.{Enter}{Enter}Please call the Enterprise location closest to you (locator link: https://goo.gl/eWguh3) and provide them with “reservation number ___________________________."  This is really just an authorization code that can be transferred to the most convenient location--please note that you'll need to confirm the actual reservation details with the local Enterprise location.  Make sure that the location you plan to visit will have the type of vehicle you need available and let them know if you’ll need a lift (the closest location to you can pick you up).
+return
+
+::-app::		; Type URL for submitting credit application
+::-credit::		; Type URL for submitting credit application
+SendInput https://www.teslamotors.com/user/login{Enter}OR (if you have not yet made your order payment){Enter}http://teslamotors.com/creditapp{Enter}
+return
+
+::-wire::		; Type Wire Transfer instructions for a customer
+SendInput Wire Transfer{enter}{enter} Please include your name and your order number - RN _____ when paying by wire transfer. {enter}{enter} Bank Name: Wells Fargo Bank, N.A.{enter}{enter} Bank Address: 420 Montgomery San Francisco, CA 94104{enter}{enter} Account Name: Tesla Motors Inc.{enter}{enter}Account number: 4000118323 {enter}{enter}ABA/Routing Number: 121000248{enter}{enter} Note: Your name, RN _____ {enter}{enter}
+Return
+
+
+::-g::		;Click the generate delivery configuration button 
+Send ^f ;(Ctrl+f for find)
+Sleep, 50
+Send Delivery History[ ; Unique search phrase just above buttons
+Sleep, 50
+Send {Escape}
+Sleep, 50
+Send {Tab}
+Sleep, 50
+Send {Tab}
+Sleep, 50
+Send {Tab}
+Sleep, 50
+Send {Tab}
+Sleep, 50
+Send {Tab}
+Sleep, 50
+Send {Tab} 
+Sleep, 50
+Send {Enter}
+Return
+
+::-save::		;Click the Save button at the top of a Delivery Object	[[TESTED IN CHROME]]
+save()
+
+Return 
+
+save() ; Click the Save button at the top of a Delivery Object
+{
+	SendInput ^f ;(Ctrl+f for find)
+	Sleep, 50 ;(wait .05 second)
+	SendInput Delivery Record Overview ;Unique phrase just below "save" button
+	Sleep, 50
+	SendInput {Escape}
+	Sleep, 50
+	SendInput {Shift Down}{Tab}{Tab}{Shift Up}
+	Sleep, 50
+	SendInput {Enter}
+	
+	Return 
+}
+
+::-plugin::		; Type plugshare.com and Tesla Supercharger links
+SendInput http://www.plugshare.com/{Enter}{Enter}http://www.supercharge.info{Enter}{Enter}http://www.teslamotors.com/supercharger{Enter}
+Return
+
+::-newowner::		; Type instructions for transfer of ownership
+SendInput To transfer ownership of your vehicle and allow the new owner to access the car from the app, please send us the following: {Enter}{Enter}{Tab}1) Color copy or photo of new owner's current driver’s license or state ID{Enter}{Enter}{Tab}2) Copy or photo of the title OR registration to indicate transfer of ownership{Enter}{Enter}{Tab}3) New owner's email address to link to the account{Enter}{Enter}{Tab}4) Home or mailing address of new owner{Enter}{Enter}{Tab}5) Phone number of new owner
+Return
+
+::-carwash::		; Type warning about automatic car washes and instructions in case they want to completely disregard it :)
+SendInput We don’t recommend the automatic car wash because the rollers can accumulate dirt and scratch the paint.  If you need to take it to an automatic wash, you may need to put it in “Tow Mode.”{Enter}{Enter}If you or an attendant can stay seated in driver's seat, all you'll need to do is shift into neutral and turn off the windshield wipers.  {Enter}{Enter}Otherwise, you'll need to turn off the windshield wipers, drive the car onto the dollies that pull it through, and tap the following center screen buttons as indicated on the attached image to lock the car in neutral before you get out of the driver’s seat:  {Enter}{Enter}1)	Controls --> 2) Settings Tab --> 3) Tow Mode{Enter}{Enter}{Enter}With your foot on the brake you can move the slider on the center screen to "Tow Mode."  When the car comes out on the other end, you'll need to put your foot on the brake, press the metal button on the shifter for park, and then push and hold the red button on the center screen to exit Tow Mode.{Enter}{Enter}Feel free to give our service team a call at 973-921-0925 EXT 2 for assistance.  If it's after hours, you can also call 877-798-3752. 
+Return
+
+::-track::		; Type FedEx note for Delivery Notes field
+::-tracking::	; Type FedEx note for Delivery Notes field
+::-fedex::		; Type FedEx note for Delivery Notes field
+SendInput DMV docs tracking: {Enter}Finance Docs Tracking:  
+Return
+
+
+::-usbank::		; Type US Bank's contact phone number
+Send 800-872-2657
+Return
+
+::-wellsfargo::		; Type Wells Fargo's contact phone number
+::-wells::			; Type Wells Fargo's contact phone number
+::-wfbank::			; Type Wells Fargo's contact phone number
+::-wf::				; Type Wells Fargo's contact phone number
+Send 877-246-1015  
+Return
+
+::-chase::			; Type Chase's contact phone number
+Send 800-336-6675 
+Return
+
+::-td::				; Type TD Bank's contact phone number
+Send 800-556-8172
+Return
+
+::-rtfm::			; Read the F-ing manual...
+SendInput You can follow the links in my signature below to our service page to review videos of your vehicle's functionality.  You can also see a brief video about summon here: https://www.tesla.com/blog/summon-your-tesla-your-phone and I’ve attached your manual – hit Control + F and type Summon to find the relevant page (page 90).  If you have any questions, feel free to give me a call. You can access your vehicle's manual at http://www.tesla.com/mytesla
+Return 
+
+::-mvpa::	; Type canned response about MVPA
+SendInput Please see your purchase agreement attached indicating $_______ financed and a final balance of $_________ which can be paid online at http://www.tesla.com/mytesla or at the time of your delivery by personal check. Please let me know if you have any questions at all.{Enter}{Enter}
+Return
+
+::-lojack::		; Tracking system info for insurance
+SendInput Hi ____,{Enter}{Enter}Please let your insurance agent know that your Model S comes with a tracking system that you can use if the vehicle were stolen.  You can learn more about it here:{Enter}{Enter}https://itunes.apple.com/us/app/tesla-model-s/id582007913?mt=8{Enter}{Enter}Please also see page 80 of the owner’s manual, which I’ve attached.{Enter}{Enter}Best,{Enter}Aron
+Return
+
+::-foff::		; Drop customer a hint
+Send Since the Delivery Team is often in walk-throughs and away from our desks, please reach out to the service team directly at [DEFAULT] EXT 2 or email [DEFAULT] with any questions you might have in the future.  This will allow us to provide you with the fastest service going forward.
+Return
+
+
 
 Return ; End of Script
