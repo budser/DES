@@ -1,6 +1,6 @@
 ; Script assembled by 
 ; Aron Talenfeld
-; p 201.207.0753 | e budser@gmail.com
+; p 650.485.3033 | e budser@gmail.com
 
 ; 1)Download a portable copy (no installation required) of AHK from https://autohotkey.com/download/
 ;   Follow the link "Download AutoHotkey .zip" and extract "AutoHotkeyU64.exe" to a safe place on your hard drive.
@@ -10,8 +10,6 @@
 ; 3)Select Autohotkey.exe as the default program to open this .ahk file
 ; 4)Create a shortcut to this file in the startup folder 
 ;   (i.e. C:\Users\[yourAlias]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup)
-
-; ################ Summary of hotkeys/hotstrings at bottom of this file #################
 
 !F5::Reload ; Hit Alt + F5 to reload this AHK script (will also stop a running hotkey)
 
