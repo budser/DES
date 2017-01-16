@@ -11,4 +11,5 @@ Getting started:
 
 3) Select Autohotkey.exe as the default program to open this .ahk file 
 
-4) Create a shortcut to this file in the startup folder so that your script will load with Windows (i.e. C:\Users\[yourAlias]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup)
+4) Create a shortcut to this file in the startup folder so that your script will load with Windows 
+   (i.e. C:\Users\[yourAlias]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup)
