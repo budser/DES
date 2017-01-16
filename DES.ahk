@@ -38,6 +38,10 @@ IfWinActive, Notepad ; any window with Notepad in title
 }
 Return
 
+::-github::
+Run https://github.com/budser/DES
+Return
+
 ::-sleep::
 Send Sleep, `%SleepTime`%{Enter}{Enter} 
 Return 
