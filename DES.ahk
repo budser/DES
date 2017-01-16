@@ -4,7 +4,9 @@
 
 ; 1)Download a portable copy (no installation required) of AHK from https://autohotkey.com/download/
 ;   Follow the link "Download AutoHotkey .zip" and extract "AutoHotkeyU64.exe" to a safe place on your hard drive.
-; 2)Save this file (the one you're reading) in .ahk format to a safe place on your hard drive.
+; 2)Save this file (the one you're reading) in .ahk format to a safe place on your hard drive. Edit it in NotePad
+;   or the text editor of your choice. For example, you can replace "[DEFAULT]" in the script below with your 
+;   location specific information.
 ; 3)Select Autohotkey.exe as the default program to open this .ahk file
 ; 4)Create a shortcut to this file in the startup folder 
 ;   (i.e. C:\Users\[yourAlias]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup)
@@ -839,5 +841,83 @@ Send Since the Delivery Team is often in walk-throughs and away from our desks, 
 Return
 
 
+::-plans::		; Type service plans page URL
+Send https://www.tesla.com/support/service-plans
+Return
+
+::-pc::		; Type a post-call note
+Send Hi ____,{Enter}{Enter}It was a pleasure speaking with you this morning.  I’ve tentatively scheduled your delivery for ____ but will keep in mind your preference to receive it sooner and definitely let you know if this becomes possible.{Enter}{Enter}I’ve highlighted your preferences below but feel free to give me a call any time with questions.  We can’t wait to meet you and introduce you to your new wheels.{Enter}{Enter}Best,{Enter}Aron
+Return
+
+
+::-hq::		; Type HQ's address
+Send {Enter}{Tab}ATTN: Sales Administration{Enter}{Tab}Tesla Motors{Enter}{Tab}3500 Deer Creek{Enter}{Tab}Palo Alto, CA 94304{Enter}
+return
+
+::-fu::		; Fun understatement
+SendRaw We can’t wait to meet you and introduce you to your new wheels!
+return
+
+::-incentives::		; Type link to incentives page
+Send You can learn more about local and national incentives for your Model S at:{Enter}{Enter}{Tab}http://www.teslamotors.com/incentives/US/New`%2520Jersey{Enter}{Enter}http://www.irs.gov/Businesses/30D-New-Qualified-Plug-in-Electric-Drive-Motor-Vehicles--Tesla-Motors-Inc{Enter}{Enter}
+return
+
+::-d::		; Type timestamp
+Send %A_DD%%A_MMM%%A_YYYY% [DEFAULT]:{Space}
+return
+
+::-t::		; Type the current hour
+FormatTime, Time, ,htt:
+SendInput, %Time%
+Return
+
+::-alliant::	; Type Alliant application info
+SendInput Alliant Credit Union:{Enter}{Enter}Apply online: https://www.alliantcreditunion.com/Applications/LOS/TeslaHome{Enter{Enter}Phone: 800-328-1935{Enter}{Enter}tesla@alliantcreditunion.com 
+Return
+
+
+::-techcu::		; Type TCU contact info
+::-tcu::		; Type TCU contact info
+SendInput Application link: https://www.techcu.com/tesla/{Enter}{Enter}Contact #: 1-855-845-7060{Enter}{Enter}tesla@techcu.com{Enter}
+Return
+
+::-cust::	; Type month and "Tesla Customer" for saving a contact name
+SendInput %A_MMM%%A_YYYY% Tesla Customer
+return
+
+::-store::		; Type Tesla store URL
+::-shop::		; Type Tesla store URL
+SendInput http://shop.tesla.com
+return
+
+::-charging::	; Type charging contact info
+SendInput  650.681.6133 or ChargingInstallation@teslamotors.com
+return
+
+::-tax::		; Type info on federal tax credit
+SendInput You can download the appropriate form for the $7,500 federal tax credit here, at the bottom of the page, under “Claiming the Credit”:{Enter}{Enter}http://www.fueleconomy.gov/feg/taxevb.shtml{Enter}{Enter}Your accountant or tax professional can advise on the appropriate form to use and how to complete it. Please let me know if you have any questions.{Enter}{Enter}
+Return
+
+::-mytesla::	; Type link to My Tesla
+Send https://www.tesla.com/mytesla/{Space}
+return 
+
+::-walk::			; Type links to walk-through videos
+::-walk-through::	; Type links to walk-through videos
+::-walkthrough::	; Type links to walk-through videos
+SendInput https://www.teslamotors.com/support/model-s-walkthrough{Enter}https://www.teslamotors.com/support/model-x-walkthrough{Enter}https://www.teslamotors.com/support/touchscreen-overview{Enter}https://www.teslamotors.com/support/tesla-mobile-app-walkthrough{Enter}
+return
+
+::-autopilot::		; Type links to autopilot videos
+sendinput Autosteer: https://www.youtube.com/watch?v=4dv1LtEStu0{Enter}Auto Lane Change: https://www.youtube.com/watch?v=PUbk2Ko-VU4{Enter}Autopark: https://www.youtube.com/watch?v=Cn4X6nFsfo0{Enter}Summon: https://youtu.be/sQuJ8GKTjFM{Enter}
+return 
+
+::-leasing::	; Type leasing contact info
+SendInput Phone: You can reach our Tesla Leasing team at 844-837-5285 or by email at teslafinance@tesla.com.
+return 
+
+::-finance::	; Type contact for finance team
+Send autofinance@teslamotors.com or 650-681-6789
+return
 
 Return ; End of Script
