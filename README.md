@@ -1,5 +1,5 @@
 # DES
-Autohotkey hotstrings to annihilate DES drudgery
+AutoHotkey hotstrings to annihilate DES drudgery
 
 Script assembled by Aron Talenfeld (p 650.485.3033 | e budser@gmail.com)
 
