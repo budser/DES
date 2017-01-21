@@ -3,7 +3,7 @@
 ; p 650.485.3033 | e budser@gmail.com
 
 ; 1)Download a portable copy (no installation required) of AHK from https://autohotkey.com/download/
-;   Follow the link "Download AutoHotkey .zip" and extract "AutoHotkeyU64.exe" to a safe place on your hard drive.
+;   (Follow the link "Download AutoHotkey .zip" and extract "AutoHotkeyU64.exe" to a safe place on your hard drive)
 ; 2)Save this file (the one you're reading) in .ahk format to a safe place on your hard drive. Edit it in NotePad
 ;   or the text editor of your choice. For example, you can replace "[DEFAULT]" in the script below with your 
 ;   location specific information.
