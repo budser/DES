@@ -11,7 +11,7 @@ Getting started:
 2) Save the DES.ahk file to a safe place on your hard drive. Edit it in NotePad or the text editor of your choice. 
    For example, you'll want to change the script to reflect local info where you see "[DEFAULT]" 
 
-3) Select Autohotkey.exe as the default program to open this .ahk file 
+3) Select Autohotkey.exe as the default program to open DES.ahk. 
 
-4) Create a shortcut to this file in the startup folder so that your script will load with Windows 
+4) Create a shortcut to DES.ahk in the startup folder so that your script will load with Windows 
    (i.e. C:\Users\[yourAlias]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup)
